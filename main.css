@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    height: 100%;
+}
+.header {
+    position: relative;
+    width: 100%;
+    padding: 1rem 0;
+    background: lightblue;
+    display: flex;
+}
+
+.header-title {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+}
+
+.header-title span {
+    display: block;
+}
+
+.header-button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 0.5rem;
+    cursor: pointer;
+}
+
+.header-button:focus {
+    outline: none;
+}
+
+.header-button div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.container {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: #1D1D1B;
+    text-align: center;
+    display: block;
+}
+
+.footer h2 {
+    margin: 0;
+    color: lightblue;
+    text-underline-style: single;
+    padding-top:2rem;
+}
+
+.footer p {
+    color: #FFF;
+    text-align: center;
+}
+
+.footer a {
+    display: inline-block;
+    color: lightblue;
+    border: 2px solid darkcyan;
+    font-weight: bold;
+    font-size:1rem;
+    text-decoration: none;
+    padding: 20px 10px;
+    margin-bottom: 2rem;
+}
