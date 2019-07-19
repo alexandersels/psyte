@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +10,9 @@ html {
     height: 100%;
 }
 
+
 body {
+
     margin: 0;
     display: grid;
     grid-template-rows: fit-content(5rem) auto fit-content(8rem);
@@ -102,29 +108,44 @@ main {
     width: 100%;
 }
 
-.topic__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 0.5rem;
-    justify-items: center;
+.container-title {
+    text-align: center;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: #7997A1;
 }
 
 .topic {
+    text-align: center;
+    font-family: "Muli", sans-serif;
     width: 100%;
-    border: 5px solid #87b5ff;
-    border-radius: 3px;
-    font-size: 2em;
-    font-family: sans-serif;
-    font-weight: bold;
-    background-color: #1c57b5
+    color: rgb(120, 120, 120);
+    padding: 1rem 2rem;
 }
 
-.topic-title {
-
+.topic img {
+    height: 90px;
+    width: 80px;
+}
+.topic__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
-.topic-description {
+.topic__title {
+    font-size: 1.5rem;
+    color: rgb(68, 68, 68);
+    font-weight: 700;
+    line-height: 1rem;
+}
 
+.topic__description {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
 }
 
 .footer {
