@@ -10,6 +10,18 @@ html {
     height: 100%;
 }
 
+.backdrop {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.2s linear;
+}
 
 body {
     margin: 0;
@@ -30,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 50;
 }
 
 .header-title {
@@ -64,13 +77,13 @@ body {
 }
 
 .nav-mobile {
-    position: absolute;
+    position: fixed;
     top: 3.5rem;
     left: 0;
     background-color: rgba(0, 0, 0, 0.85);
     height: auto;
     width: 100%;
-    z-index: 0;
+    z-index: 50;
     grid-column: span 3;
     transition: 200ms ease;
     opacity: 0;
@@ -224,6 +237,6 @@ main {
 }
 
 .open {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
