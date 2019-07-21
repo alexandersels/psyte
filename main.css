@@ -12,21 +12,24 @@ html {
 
 
 body {
-
     margin: 0;
     display: grid;
-    grid-template-rows: fit-content(5rem) auto fit-content(8rem);
+    grid-template-rows: 3.5rem auto fit-content(8rem);
     grid-template-areas: "header" "main" "footer";
     height: 100%;
 }
 
 .header {
-    position: relative;
-    grid-area: header;
-    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
     background: lightblue;
+    padding: 1rem 0;
     display: flex;
-    z-index: 100;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-title {
@@ -46,6 +49,7 @@ body {
     position: absolute;
     left: 0.5rem;
     cursor: pointer;
+    vertical-align: center;
 }
 
 .header-button:focus {
@@ -59,20 +63,18 @@ body {
     margin: 6px 0;
 }
 
-main {
-    height: 100%;
-    grid-area: main;
-}
-
 .nav-mobile {
-    transform: translateY(-200%);
     position: absolute;
+    top: 3.5rem;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.85);
     height: auto;
     width: 100%;
-    transition: transform 300ms ease-out;
-    z-index: 80;
+    z-index: 0;
     grid-column: span 3;
+    transition: 200ms ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .nav-mobile__items {
@@ -97,6 +99,12 @@ main {
     color: white;
     font-weight: bold;
     padding: 0.2rem 0;
+    cursor: pointer;
+}
+
+main {
+    height: 100%;
+    grid-area: main;
 }
 
 .container {
@@ -117,6 +125,12 @@ main {
     color: #7997A1;
 }
 
+.topic__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
 .topic {
     text-align: center;
     font-family: "Muli", sans-serif;
@@ -128,11 +142,6 @@ main {
 .topic img {
     height: 90px;
     width: 80px;
-}
-.topic__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
 }
 
 .topic__title {
@@ -148,7 +157,32 @@ main {
     line-height: 1.5rem;
 }
 
+.group-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.group-list-item {
+    margin: 1rem 2rem;
+    padding: 0;
+    display: block;
+    border: 3px solid lightblue;
+    border-radius: 15px;
+}
+
+.group-list-item h3 {
+    font-family: "Muli", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(68, 68, 68);
+    font-weight: 700;
+    line-height: 1rem;
+}
+
 .footer {
+    margin-top: 1.5rem;
+    font-family: "Muli", sans-serif;
     width: 100%;
     background-color: #1D1D1B;
     text-align: center;
@@ -166,9 +200,10 @@ main {
 .footer p {
     color: #FFF;
     text-align: center;
+    line-height: 1.5rem;
 }
 
-.footer a {
+.internal-link {
     display: inline-block;
     color: lightblue;
     border: 2px solid darkcyan;
@@ -179,7 +214,16 @@ main {
     margin-bottom: 2rem;
 }
 
+.copyright {
+    font-family: "Muli", sans-serif;
+    font-size: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
 .open {
-    display: block !important;
-    transform: translateY(0) !important;
+    visibility: visible;
+    opacity: 1;
 }
