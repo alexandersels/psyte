@@ -1,8 +1,8 @@
 #overview {
     margin: 0;
-    background: linear-gradient(to top, rgba(32, 178, 170, 0.2) 10%, transparent),
+    background: linear-gradient(to top, rgba(40, 40, 40, 0.6) 30%, transparent),
     url("images/stock2.jpg") center/cover no-repeat border-box,
-    #ff1b68;
+    #FFF;
 
     width: 100vw;
     height: 33vh;

@@ -168,6 +168,7 @@ main {
 .general-information-item {
     margin: 1rem 0;
     width: 100%;
+    padding-right: 2rem;
 }
 
 .general-information-item i {
