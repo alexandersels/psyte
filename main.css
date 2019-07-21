@@ -1,3 +1,29 @@
+#overview {
+    margin: 0;
+    background: linear-gradient(to top, rgba(32, 178, 170, 0.2) 10%, transparent),
+    url("images/stock.jpg") center/cover no-repeat border-box,
+    #ff1b68;
+
+    width: 100vw;
+    height: 33vh;
+    position: relative;
+    text-align: center;
+}
+
+#overview h1 {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 10%;
+    left: 3%;
+}
+
+#overview h2 {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 0;
+    left: 3%;
+}
+
 .topic__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -41,7 +67,7 @@
     margin: 1rem 2rem;
     padding: 0;
     display: block;
-    border: 3px solid lightblue;
+    border: 3px solid #007300;
     /*border-radius: 15px;*/
 }
 
